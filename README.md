@@ -1,12 +1,6 @@
 # benjaminwarfield
 
-I'm an app. Or maybe I'm a library? I haven't decided yet. 
-
-The choice is up to you!
-
-## Usage
-
-FIXME
+My new personal site, built in Clojure.
 
 ## License
 
