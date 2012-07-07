@@ -1,0 +1,25 @@
+body {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 62.5%;
+  color: #727272;
+  background: #f5f1ea;
+}
+a {
+  color: #6d6968;
+}
+h1 {
+  font-size: 5.6em;
+  margin-bottom: 0.2em;
+  line-height: 1.0em;
+  font-family: "futura-pt-condensed", sans-serif;
+  color: #6d6968;
+  width: 55%;
+  -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+  -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+}
+.container {
+  max-width: 980px;
+  padding: 0 40px;
+  margin: 0 auto;
+}

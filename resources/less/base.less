@@ -1,0 +1,28 @@
+@import "mixins";
+@bodyType: "helvetica neue", helvetica, arial, sans-serif;
+@fancyFont: "futura-pt-condensed", sans-serif;
+@backgroundColor: #f5f1ea;
+@alternateLink: #ffe177;
+@primaryColor: #6D6968;
+
+body {
+  font-family: @bodyType;
+  font-size:62.5%;
+  color:#727272;
+  background: @backgroundColor;
+}
+
+a {
+  color:@primaryColor;
+}
+
+h1 {
+  font-size:5.6em; 
+  margin-bottom:0.2em;
+  line-height:1.0em;
+  font-family: @fancyFont;
+  color:@primaryColor;
+  width:55%;
+  .text-shadow();
+}
+@import "layout";

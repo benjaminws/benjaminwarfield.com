@@ -4,6 +4,10 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.3.0"]
-                 [compojure "1.1.0"]]
-  :plugins [[lein-ring "0.7.1"]]
-  :ring {:handler benjaminwarfield.core/app})
+                 [compojure "1.1.0"]
+                 [hiccup "1.0.0"]]
+  :plugins [[lein-ring "0.7.1"]
+            [lein-lesscss "1.2"]]
+  :ring {:handler benjaminwarfield.routes/app}
+  :lesscss-paths ["resources/less"]
+  :lesscss-output-path "resources/public/stylesheets")
