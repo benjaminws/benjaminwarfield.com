@@ -8,7 +8,7 @@
 		  (include-css "/stylesheets/base.css")]
 		[:body
 		  [:div {:class "container"}
-            [:h1 "Benjamin W. Smith"]
+            [:h1 "Benjamin Warfield Smith"]
             [:span "Welcome to the thunderdome, bitch."]]]))
 
 (defn four-oh-four-view []
