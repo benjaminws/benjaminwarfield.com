@@ -4,7 +4,7 @@
 (defn index-view []
 	(html5
 		[:head
-		  [:title "Benjamin Warfield Smith"]
+		  [:title "Benjamin Warfield Smith is a BADASS!"]
 		  (include-css "/stylesheets/base.css")]
 		[:body
 		  [:div {:class "container"}
