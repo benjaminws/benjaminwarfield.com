@@ -25,6 +25,12 @@
          (within [:.content :a]
            (has (text? "Who the crap do I think I am?")))))
 
+(deftest index-follow-to-about-test
+    (-> (session app)
+        (visit "/")
+        (follow [:a.about])
+        (has (status? 200))))
+
 (deftest about-status-test
   (-> (session app)
       (visit "/about")
@@ -37,7 +43,9 @@
         (has (text? "Developer and Ops guy.")
              "Page header has expected content"))
       (within [:.content :p]
-        (has (text? "I run Bartertown.")))))
+        (has (text? "I run Bartertown.")))
+      (within [:.content :.around_the_web]
+        (has (text? "bah")))))
 
 (deftest four-oh-four-status-test
   (-> (session app)

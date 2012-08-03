@@ -7,19 +7,19 @@
     (include-css "/stylesheets/base.css")])
 
 (defhtml page-header []
-  [:div {:class "header"}
-    [:div {:class "container"}
-      [:div {:class "group"}
-        [:div {:class "brand"}
+  [:div.header
+    [:div.container
+      [:div.group
+        [:div.brand
           [:a {:href "/"} "Benjamin Warfield Smith"]]]]])
 
 (defhtml page-content [content]
-  [:div {:class "container"}
-    [:div {:class "content"} content]])
+  [:div.container
+    [:div.content content]])
 
 (defhtml index-content []
   [:h2 "Welcome to Thunderdome, bitch."]
-  [:p [:a {:href "/about"} "Who the crap do I think I am?"]])
+  [:p [:a.about {:href "/about"} "Who the crap do I think I am?"]])
 
 (defn index-view []
   (html5
@@ -30,7 +30,8 @@
 
 (defhtml about-content []
   [:h2 "Developer and Ops guy."]
-  [:p "I run Bartertown."])
+  [:p "I run Bartertown."]
+  [:div.around_the_web "bah"])
 
 (defn about-view []
   (html5
