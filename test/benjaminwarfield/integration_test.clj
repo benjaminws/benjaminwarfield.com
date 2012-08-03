@@ -21,7 +21,23 @@
         (visit "/")
         (within [:.content :h2]
           (has (text? "Welcome to Thunderdome, bitch.")
-              "Index has expected content"))))
+              "Index has expected content"))
+         (within [:.content :a]
+           (has (text? "Who the crap do I think I am?")))))
+
+(deftest about-status-test
+  (-> (session app)
+      (visit "/about")
+      (has (status? 200))))
+
+(deftest about-content-test
+  (-> (session app)
+      (visit "/about")
+      (within [:.content :h2]
+        (has (text? "Developer and Ops guy.")
+             "Page header has expected content"))
+      (within [:.content :p]
+        (has (text? "I run Bartertown.")))))
 
 (deftest four-oh-four-status-test
   (-> (session app)
