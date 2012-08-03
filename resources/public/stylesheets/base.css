@@ -66,3 +66,11 @@ h2 {
   margin-bottom: 0;
   min-height: 400px;
 }
+
+.around_the_web {
+  padding: 2em 0 0 1.5em;
+}
+
+.around_the_web li {
+  padding: .5em 0 0 0;
+}

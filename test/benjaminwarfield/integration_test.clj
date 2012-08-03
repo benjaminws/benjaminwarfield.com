@@ -43,9 +43,7 @@
         (has (text? "Developer and Ops guy.")
              "Page header has expected content"))
       (within [:.content :p]
-        (has (text? "I run Bartertown.")))
-      (within [:.content :.around_the_web]
-        (has (text? "bah")))))
+        (has (text? "I run Bartertown.")))))
 
 (deftest four-oh-four-status-test
   (-> (session app)

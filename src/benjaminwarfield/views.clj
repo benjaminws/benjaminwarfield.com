@@ -31,7 +31,11 @@
 (defhtml about-content []
   [:h2 "Developer and Ops guy."]
   [:p "I run Bartertown."]
-  [:div.around_the_web "bah"])
+  [:div.around_the_web
+    [:ul
+      [:li [:a {:href "http://twitter.com/benjaminws"} "Twitter"]]
+      [:li [:a {:href "http://github.com/benjaminws"} "Github"]]
+      [:li [:a {:href "http://designinginteractive.com"} "Designing Interactive"]]]])
 
 (defn about-view []
   (html5
