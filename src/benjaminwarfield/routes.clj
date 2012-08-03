@@ -8,6 +8,7 @@
 
 (defroutes main-routes
   (GET "/" [] (index-view))
+  (GET "/about" [] (about-view))
   (route/resources "/")
   (route/not-found (four-oh-four-view)))
 
