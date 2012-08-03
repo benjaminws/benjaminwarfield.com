@@ -29,7 +29,7 @@
           (index-content))))
 
 (defhtml about-content []
-  [:h2 "Master Blaster"]
+  [:h2 "Developer and Ops guy."]
   [:p "I run Bartertown."])
 
 (defn about-view []
