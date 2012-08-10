@@ -1,10 +1,11 @@
 (ns benjaminwarfield.views
-	(:use [hiccup core page def]))
+	(:use [hiccup core page def element]))
 
 (defhtml html-head []
   [:head
     [:title "Benjamin Warfield Smith"]
-    (include-css "/stylesheets/base.css")])
+    (include-css "/stylesheets/base.css")
+    (include-js "/javascripts/analytics.js")])
 
 (defhtml page-header []
   [:div.header
