@@ -8,7 +8,8 @@
                  [hiccup "1.0.0"]
                  [kerodon "0.0.4"]]
   :plugins [[lein-ring "0.7.1"]
-            [lein-lesscss "1.2"]]
+            [lein-lesscss "1.2"]
+            [gen-article "0.1.0-SNAPSHOT"]]
   :ring {:handler benjaminwarfield.routes/app}
   :lesscss-paths ["resources/less"]
   :lesscss-output-path "resources/public/stylesheets")

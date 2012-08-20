@@ -1,5 +1,6 @@
 (ns benjaminwarfield.views
-	(:use [hiccup core page def element]))
+	(:use [hiccup core page def element])
+    (:gen-class))
 
 (defhtml html-head []
   [:head
