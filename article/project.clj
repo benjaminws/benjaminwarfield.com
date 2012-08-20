@@ -3,5 +3,5 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[clj-time "0.4.4"]]
+  :dependencies [[markdown-clj "0.9.8"]]
   :eval-in-leiningen true)

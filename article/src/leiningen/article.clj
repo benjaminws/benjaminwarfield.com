@@ -1,6 +1,7 @@
 (ns leiningen.article
+  (:use [markdown])
   (:require [clojure.java.io :as io])
-  (:import java.io.File)
+  (:import [java.io File FileReader FileWriter])
   (:import [java.util Calendar]))
 
 (defn get-articles-path []
@@ -29,13 +30,20 @@
       (.createNewFile (io/file path))))
 
 (defn create [project article-name & args]
-  (let [full-article-path (format "%s/%s.md" (get-articles-path) article-name)]
-  (println (format "Creating article at: %s" full-article-path))
+  (let [full-article-path (format "%s%s.md" (get-articles-path) article-name)]
   (ensure-directory! (get-articles-path))
-  (ensure-file! full-article-path)))
+  (ensure-file! full-article-path)
+  (println (format "Created article at: %s" full-article-path))))
 
-(defn publish
-  ([project & args] (println "IMPLEMENT ME")))
+(defn publish [project article-path & args]
+  (let [article-destination
+    (format "%s/%s.html"
+      (.getParent (io/as-file article-path))
+      (first (.split (.getName (io/as-file article-path)) "\\.")))]
+  (markdown/md-to-html
+    (new FileReader article-path)
+    (new FileWriter article-destination))
+  (println (format "Published article at: %s" article-destination))))
 
 (defn article
   "Create and publish new articles."
