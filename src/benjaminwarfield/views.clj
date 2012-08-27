@@ -1,5 +1,6 @@
 (ns benjaminwarfield.views
 	(:use [hiccup core page def element])
+    (:require [clojure.java.io :as io])
     (:gen-class))
 
 (defhtml html-head []
@@ -35,8 +36,13 @@
       [:li [:a {:href "http://github.com/benjaminws"} "Github"]]
       [:li [:a {:href "http://designinginteractive.com"} "Designing Interactive"]]]])
 
+(def articles-root (str (System/getProperty "user.dir") "/articles/"))
+
 (defn article-html [article-path]
-  (slurp (str "./articles/" article-path)))
+  (slurp (str article-path)))
+
+(defn all-articles []
+  (filter #(.endsWith (.getName %) ".html") (file-seq (io/file articles-root))))
 
 (defn index-view []
   (html5
@@ -57,7 +63,14 @@
     (html-head)
       (page-header)
         (page-content
-          (article-html article-path))))
+          (article-html (str articles-root article-path)))))
+
+(defn list-articles []
+   (html5
+    (html-head)
+      (page-header)
+        (page-content
+          (map article-html (all-articles)))))
 
 (defn four-oh-four-view []
   (html5

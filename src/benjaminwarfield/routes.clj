@@ -11,6 +11,7 @@
 (defroutes main-routes
   (GET "/" [] (index-view))
   (GET "/about" [] (about-view))
+  (GET "/articles" [] (list-articles))
   (GET ["/articles/:article" :article article-slug] [article] (article-view article))
   (route/resources "/")
   (route/not-found (four-oh-four-view)))
