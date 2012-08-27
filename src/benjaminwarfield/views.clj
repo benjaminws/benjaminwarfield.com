@@ -6,7 +6,10 @@
   [:head
     [:title "Benjamin Warfield Smith"]
     (include-css "/stylesheets/base.css")
-    (include-js "/javascripts/analytics.js")])
+    (include-css "/stylesheets/shCore.css")
+    (include-css "/stylesheets/shThemeDefault.css")
+    (include-js "/javascripts/analytics.js")
+    (include-js "/javascripts/shCore.js")])
 
 (defhtml page-header []
   [:div.header
@@ -23,13 +26,6 @@
   [:h2 "Welcome to Thunderdome, bitch."]
   [:p [:a.about {:href "/about"} "Who the crap do I think I am?"]])
 
-(defn index-view []
-  (html5
-    (html-head)
-      (page-header)
-        (page-content
-          (index-content))))
-
 (defhtml about-content []
   [:h2 "Developer and Ops guy."]
   [:p "I run Bartertown."]
@@ -39,12 +35,29 @@
       [:li [:a {:href "http://github.com/benjaminws"} "Github"]]
       [:li [:a {:href "http://designinginteractive.com"} "Designing Interactive"]]]])
 
+(defn article-html [article-path]
+  (slurp (str "./articles/" article-path)))
+
+(defn index-view []
+  (html5
+    (html-head)
+      (page-header)
+        (page-content
+          (index-content))))
+
 (defn about-view []
   (html5
    (html-head)
     (page-header)
      (page-content
        (about-content))))
+
+(defn article-view [article-path]
+  (html5
+    (html-head)
+      (page-header)
+        (page-content
+          (article-html article-path))))
 
 (defn four-oh-four-view []
   (html5

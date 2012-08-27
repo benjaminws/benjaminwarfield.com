@@ -49,6 +49,6 @@
   "Create and publish new articles."
   [project subtask & args]
     (case subtask
-      "create" (apply create project args)
+      "create"  (apply create project args)
       "publish" (apply publish project args)
-               (println "Subtask" (str \" subtask \") "not found.")))
+                (println "Subtask" (str \" subtask \") "not found.")))

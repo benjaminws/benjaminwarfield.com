@@ -6,9 +6,12 @@
             [compojure.handler :as handler]
             [compojure.response :as response]))
 
+(def article-slug #"([0-9]{4})/([0-9]{1,2})/([0-9]{2})/([a-zA-Z\\-]+\.html)")
+
 (defroutes main-routes
   (GET "/" [] (index-view))
   (GET "/about" [] (about-view))
+  (GET ["/articles/:article" :article article-slug] [article] (article-view article))
   (route/resources "/")
   (route/not-found (four-oh-four-view)))
 
