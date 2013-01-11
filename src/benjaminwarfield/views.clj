@@ -53,10 +53,10 @@
 
 (defn about-view []
   (html5
-   (html-head)
-    (page-header)
-     (page-content
-       (about-content))))
+    (html-head)
+      (page-header)
+        (page-content
+          (about-content))))
 
 (defn article-view [article-path]
   (html5
