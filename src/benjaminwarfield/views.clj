@@ -12,7 +12,7 @@
     (include-js "/javascripts/analytics.js")
     (include-js "/javascripts/shCore.js")
     (include-js "/javascripts/refocus.js")
-    (include-js "/javascripts/refocusConfig.js"])
+    (include-js "/javascripts/refocusConfig.js")])
 
 (defhtml page-header []
   [:div.header
