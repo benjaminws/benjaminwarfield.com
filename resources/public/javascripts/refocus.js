@@ -1,8 +1,8 @@
 var ReFocus = {
   start: function() {
     var config = ReFocus.Config;
-    var refocusScript = document.createElement('script');
-    refocusScript.type= 'text/javascript';
+    var refocusScript  = document.createElement('script');
+    refocusScript.type = 'text/javascript';
 
     if (config.env != 'production') {
       refocusScript.src = config.clientSrc;

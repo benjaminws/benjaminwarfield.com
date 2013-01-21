@@ -5,7 +5,10 @@ ReFocus.Config = {
   env: 'production',
   clientSrc: '/public/refocus_core.js',
   endpoint: '/interactions',
-  productionURL: 'http://staging.refocus.co'
+  productionURL: 'http://staging.refocus.co',
+  authEnabled: true,
+  authUser: 'tester',
+  authPass: '2CNsbOJV4gFlQ1V'
 };
 if(window.location.search == '?production'){
   ReFocus.Config.env = 'production';
