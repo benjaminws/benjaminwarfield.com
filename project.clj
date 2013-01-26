@@ -6,7 +6,9 @@
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [compojure "1.1.0"]
                  [hiccup "1.0.0"]
-                 [kerodon "0.0.4"]]
+                 [kerodon "0.0.4"]
+                 [ring/ring-jetty-adapter "1.1.8"]]
+
   :plugins [[lein-ring "0.7.1"]
             [lein-lesscss "1.2"]]
   :ring {:handler benjaminwarfield.routes/app}

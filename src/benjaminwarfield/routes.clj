@@ -4,7 +4,8 @@
         [hiccup.middleware :only (wrap-base-url)])
   (:require [compojure.route :as route]
             [compojure.handler :as handler]
-            [compojure.response :as response]))
+            [compojure.response :as response]
+            [ring.adapter.jetty :as jetty]))
 
 (def article-slug #"([0-9]{4})/([0-9]{1,2})/([0-9]{2})/([a-zA-Z\\-]+\.html)")
 
@@ -19,3 +20,7 @@
 (def app
   (-> (handler/site main-routes)
       (wrap-base-url)))
+
+(def port (Integer/parseInt (get (System/getenv) "PORT")))
+
+(jetty/run-jetty main-routes {:port port})
