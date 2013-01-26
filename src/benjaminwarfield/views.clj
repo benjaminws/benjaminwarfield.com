@@ -29,7 +29,7 @@
     [:div.content content]])
 
 (defhtml index-content []
-  [:h2 "Welcome to Thunderdome, bitch."]
+  [:h2 "Welcome to Thunderdome."]
   [:p [:a.about {:href "/about"} "Who the crap do I think I am?"]])
 
 (defhtml about-content []
