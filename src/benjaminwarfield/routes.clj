@@ -23,4 +23,4 @@
 
 (def port (Integer/parseInt (get (System/getenv) "PORT")))
 
-(jetty/run-jetty main-routes {:port port})
+(jetty/run-jetty main-routes {:port port, :host "0.0.0.0"})

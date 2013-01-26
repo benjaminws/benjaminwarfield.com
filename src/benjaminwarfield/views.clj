@@ -5,14 +5,17 @@
 
 (defhtml html-head []
   [:head
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:title "Benjamin Warfield Smith"]
     (include-css "/stylesheets/base.css")
+    (include-css "/stylesheets/bootstrap-responsive.min.css")
     (include-css "/stylesheets/shCore.css")
     (include-css "/stylesheets/shThemeDefault.css")
     (include-js "/javascripts/analytics.js")
     (include-js "/javascripts/shCore.js")
     (include-js "/javascripts/refocus.js")
-    (include-js "/javascripts/refocusConfig.js")])
+    (include-js "/javascripts/refocusConfig.js")
+    (include-js "/javascripts/bootstrap.min.js")])
 
 (defhtml page-header []
   [:div.header
