@@ -78,4 +78,6 @@ h2 {
 
 .around_the_web li {
   padding: .5em 0 0 0;
+  font-size: 1.8em;
+  font-family: "futura-pt-condensed", sans-serif;
 }
