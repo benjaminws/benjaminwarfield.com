@@ -20,10 +20,10 @@
     (-> (session app)
         (visit "/")
         (within [:.content :h2]
-          (has (text? "Welcome to Thunderdome, bitch.")
+          (has (text? "Hey ya'll")
               "Index has expected content"))
          (within [:.content :a]
-           (has (text? "Who the crap do I think I am?")))))
+           (has (text? "Who do I think I am?")))))
 
 (deftest index-follow-to-about-test
     (-> (session app)
@@ -41,9 +41,7 @@
       (visit "/about")
       (within [:.content :h2]
         (has (text? "Developer and Ops guy.")
-             "Page header has expected content"))
-      (within [:.content :p]
-        (has (text? "I run Bartertown.")))))
+             "Page header has expected content"))))
 
 (deftest four-oh-four-status-test
   (-> (session app)
@@ -55,5 +53,5 @@
   (-> (session app)
       (visit "/404")
       (within [:.content :h2]
-        (has (text? "404 - U MAD?")
+        (has (text? "404 - >:-c")
             "404 page has expected content"))))

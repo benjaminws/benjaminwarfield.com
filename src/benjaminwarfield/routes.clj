@@ -21,6 +21,9 @@
   (-> (handler/site main-routes)
       (wrap-base-url)))
 
-(def port (Integer/parseInt (get (System/getenv) "PORT")))
+(defn run []
+  (def port (Integer/parseInt (get (System/getenv) "PORT")))
+  (jetty/run-jetty main-routes {:port port, :host "0.0.0.0"}))
 
-(jetty/run-jetty main-routes {:port port, :host "0.0.0.0"})
+(defn -main [& args]
+  (run))
