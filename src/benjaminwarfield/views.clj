@@ -29,12 +29,11 @@
     [:div.content content]])
 
 (defhtml index-content []
-  [:h2 "Welcome to Thunderdome."]
-  [:p [:a.about {:href "/about"} "Who the crap do I think I am?"]])
+  [:h2 "Hey ya'll"]
+  [:p [:a.about {:href "/about"} "Who do I think I am?"]])
 
 (defhtml about-content []
   [:h2 "Developer and Ops guy."]
-  [:p "I run Bartertown."]
   [:div.around_the_web
     [:ul
       [:li [:a {:href "http://twitter.com/benjaminws"} "Twitter"]]
@@ -82,4 +81,4 @@
     (html-head)
       (page-header)
         (page-content
-          [:h2 "404 - U MAD?"])))
+          [:h2 "404 - >:-c"])))
