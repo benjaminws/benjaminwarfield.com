@@ -38,7 +38,8 @@
     [:ul
       [:li [:a {:href "http://twitter.com/benjaminws"} "Twitter"]]
       [:li [:a {:href "http://github.com/benjaminws"} "Github"]]
-      [:li [:a {:href "http://designinginteractive.com"} "Designing Interactive"]]]])
+      [:li [:a {:href "http://designinginteractive.com"} "Designing Interactive"]]
+      [:li [:a {:href "http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x8EA10315498C1579"} "GPG Key"]]]])
 
 (def articles-root (str (System/getProperty "user.dir") "/articles/"))
 
