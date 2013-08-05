@@ -9,13 +9,10 @@
     [:title "Benjamin Warfield Smith"]
     (include-css "/stylesheets/base.css")
     (include-css "/stylesheets/bootstrap-responsive.min.css")
-    (include-css "/stylesheets/shCore.css")
-    (include-css "/stylesheets/shThemeDefault.css")
     (include-js "/javascripts/analytics.js")
-    (include-js "/javascripts/shCore.js")
-    (include-js "/javascripts/refocus.js")
-    (include-js "/javascripts/refocusConfig.js")
-    (include-js "/javascripts/bootstrap.min.js")])
+    (include-js "/javascripts/bootstrap.min.js")
+    (include-js "http://assets-staging.refocus.co/refocus.js")
+    (javascript-tag "ReFocus.init({ host: '//assets-staging.refocus.co', socketHost: 'refocus.staging.d-i.co'});")])
 
 (defhtml page-header []
   [:div.header
