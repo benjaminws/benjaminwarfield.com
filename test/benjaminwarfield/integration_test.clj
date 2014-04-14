@@ -20,7 +20,7 @@
     (-> (session app)
         (visit "/")
         (within [:.content :h2]
-          (has (text? "Hey ya'll")
+          (has (text? "Hey y'all")
               "Index has expected content"))
          (within [:.content :a]
            (has (text? "Who do I think I am?")))))
