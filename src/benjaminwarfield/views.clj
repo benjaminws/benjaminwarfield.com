@@ -11,8 +11,6 @@
     (include-css "/stylesheets/bootstrap-responsive.min.css")
     (include-js "/javascripts/analytics.js")
     (include-js "/javascripts/bootstrap.min.js")
-    (include-js "http://assets-staging.refocus.co/refocus.js")
-    (javascript-tag "ReFocus.init({ host: '//assets-staging.refocus.co', socketHost: 'refocus.staging.d-i.co'});")])
 
 (defhtml page-header []
   [:div.header
@@ -30,7 +28,7 @@
   [:p [:a.about {:href "/about"} "Who do I think I am?"]])
 
 (defhtml about-content []
-  [:h2 "Developer and Ops guy."]
+  [:h2 "Me, around the web."]
   [:div.around_the_web
     [:ul
       [:li [:a {:href "http://twitter.com/benjaminws"} "Twitter"]]
